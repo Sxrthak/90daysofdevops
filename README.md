@@ -12,3 +12,4 @@ Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90D
 | 2 | Docker networking | [Two-tier Flask + MySQL on a custom bridge network](day-02-docker-networking/) |
 | 3 | Docker volumes | [Make MySQL data survive a deleted container](day-03-docker-volumes/) |
 | 4 | Docker Compose | [Flask + MySQL with one compose file and healthchecks](day-04-docker-compose/) |
+| 5 | Docker Hub | [Push my image to a registry and run it from there](day-05-docker-hub/) |
