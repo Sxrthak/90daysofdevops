@@ -10,3 +10,4 @@ Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90D
 |---|---|---|
 | 1 | Docker + AWS EC2 | [Containerise a Flask app and deploy it on EC2](day-01-flask-docker-ec2/) |
 | 2 | Docker networking | [Two-tier Flask + MySQL on a custom bridge network](day-02-docker-networking/) |
+| 3 | Docker volumes | [Make MySQL data survive a deleted container](day-03-docker-volumes/) |
