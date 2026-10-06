@@ -1,0 +1,12 @@
+# Stage 1: build (has the full Go compiler)
+FROM golang:1.23 AS builder
+WORKDIR /app
+COPY main.go .
+RUN go mod init demo && CGO_ENABLED=0 go build -o server .
+
+# Stage 2: run (tiny Alpine Linux, no compiler)
+FROM alpine:3.20
+WORKDIR /app
+COPY --from=builder /app/server .
+EXPOSE 8080
+CMD ["./server"]
