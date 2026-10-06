@@ -4,6 +4,8 @@ I'm learning DevOps in public for 90 days: building something hands-on every day
 
 Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90DaysOfDevOps**.
 
+📋 **[Docker cheat sheet](cheatsheet.md)**: every command I've used so far, grouped by topic.
+
 ## Progress
 
 | Day | Topic | Project |
