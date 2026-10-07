@@ -16,3 +16,4 @@ Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90D
 | 4 | Docker Compose | [Flask + MySQL with one compose file and healthchecks](day-04-docker-compose/) |
 | 5 | Docker Hub | [Push my image to a registry and run it from there](day-05-docker-hub/) |
 | 6 | Multi-stage builds | [1.34 GB → 23.9 MB, and when it doesn't help](day-06-multi-stage-builds/) |
+| 7 | Project 1 | [Django + Nginx + MySQL with Docker Compose](day-07-project-django-nginx-mysql/) |
