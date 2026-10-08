@@ -17,3 +17,4 @@ Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90D
 | 5 | Docker Hub | [Push my image to a registry and run it from there](day-05-docker-hub/) |
 | 6 | Multi-stage builds | [1.34 GB → 23.9 MB, and when it doesn't help](day-06-multi-stage-builds/) |
 | 7 | Project 1 | [Django + Nginx + MySQL with Docker Compose](day-07-project-django-nginx-mysql/) |
+| 8 | Project 2 | [Spring Boot Expenses Tracker + MySQL, multi-stage build](day-08-project-spring-boot-mysql/) |
