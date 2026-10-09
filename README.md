@@ -18,3 +18,4 @@ Daily updates on [LinkedIn](https://www.linkedin.com/in/sxrthak888/) with **#90D
 | 6 | Multi-stage builds | [1.34 GB → 23.9 MB, and when it doesn't help](day-06-multi-stage-builds/) |
 | 7 | Project 1 | [Django + Nginx + MySQL with Docker Compose](day-07-project-django-nginx-mysql/) |
 | 8 | Project 2 | [Spring Boot Expenses Tracker + MySQL, multi-stage build](day-08-project-spring-boot-mysql/) |
+| 9 | Project 3 | [Dockerising a MERN app: React + Node + MongoDB (DevSync)](day-09-project-devsync-mern/) |

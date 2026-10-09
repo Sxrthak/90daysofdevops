@@ -1,0 +1,51 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: devsync-mongo
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - devsync-net
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 20s
+    restart: unless-stopped
+
+  backend:
+    build: ./Backend
+    image: devsync-backend
+    container_name: devsync-backend
+    env_file:
+      - ./Backend/backend.env
+    ports:
+      - "5000:5000"
+    depends_on:
+      mongo:
+        condition: service_healthy
+    networks:
+      - devsync-net
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./Frontend
+      args:
+        VITE_API_URL: http://localhost:5000/api
+    image: devsync-frontend
+    container_name: devsync-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - devsync-net
+    restart: unless-stopped
+
+volumes:
+  mongo-data:
+
+networks:
+  devsync-net:
