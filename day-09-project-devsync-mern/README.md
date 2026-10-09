@@ -80,7 +80,8 @@ frontend:
 | The backend exits with `Missing required environment variable: ACCESS_KEY` | The repo's `.env.example` lists `SECRET_KEY`, but `config.js` actually requires `ACCESS_KEY` and `REFRESH_KEY` | Read the code, not just the docs. [`backend.env.example`](Backend/backend.env.example) lists the real variables |
 | `echo "backend.env" >> .gitignore` didn't work | `.gitignore` had no newline at the end, so the text was glued onto the last line: `uploads/backend.env`. Neither file was ignored any more | Check with `tail .gitignore`; put each entry on its own line |
 | The secrets file was copied into the backend image | `.dockerignore` excluded `.env` but not `backend.env` | Added `backend.env` to `.dockerignore` |
-| `$uri` vanished from `nginx.conf` when created with a heredoc | An unquoted `<<EOF` lets bash expand `$uri` as an (empty) variable | Use `<<'EOF'` (quoted) for files that contain `$` |
+
+Tip: when creating a file like `nginx.conf` with a heredoc, quote it (`<<'EOF'`). An unquoted `<<EOF` makes bash expand `$uri` as an empty variable. For `backend.env` I used an unquoted heredoc on purpose, so that `$(openssl rand -hex 32)` would run.
 
 ## Lessons
 
